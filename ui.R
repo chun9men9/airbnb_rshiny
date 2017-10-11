@@ -71,11 +71,13 @@ tabPanel("Subway Distance",
           )
           )#fluidrow
          ),
-# tabPanel("Crime Density",    
-#          fluidRow(
-#            column(6, plotOutput("graph_waffle", width = "100%", height = "400px"))
-#          )#fluidrow
-# ),
+tabPanel("Crime Density",    
+         fluidRow(
+           column(5, plotOutput("graph_waffle", width = "150%", height = "400px")),
+           column(4,offset=3,radioButtons("boro_waffle", label = h3("Select Borough"), 
+                                          choices = boro, selected = "Queens"))
+         )#fluidrow
+),
 tabPanel("Combined Factors",    
          fluidRow(
            column(3),
@@ -83,6 +85,23 @@ tabPanel("Combined Factors",
                   br(),
                   column(6, htmlOutput("graph_bubble"))
            )#fuildrow
+         )
+),
+tabPanel("References",
+         h2("Inside Airbnb"),
+         tags$ul(
+           tags$li(a("Website", href="http://insideairbnb.com/get-the-data.html")), 
+           tags$li(a("Oct 2017 Listings Dataset", href="http://data.insideairbnb.com/united-states/ny/new-york-city/2017-09-02/data/listings.csv.gz")) 
+         ),
+         h2("NY Government - NYC Subway Entrances and Exits"),
+         tags$ul(
+           tags$li(a("Website", href="https://data.ny.gov/Transportation/NYC-Transit-Subway-Entrance-And-Exit-Data/i9wp-a4ja")), 
+           tags$li(a("Oct 2015 Dataset", href="https://data.ny.gov/api/views/i9wp-a4ja/rows.csv?accessType=DOWNLOAD")) 
+         ),
+         h2("NYC Open Data - Historical New York City Crime Data"),
+         tags$ul(
+           tags$li(a("Website", href="https://opendata.cityofnewyork.us/data/")), 
+           tags$li(a("Sep 2017 Dataset", href="https://data.cityofnewyork.us/api/views/5jvd-shfj/rows.csv?accessType=DOWNLOAD")) 
          )
 )
 ))
