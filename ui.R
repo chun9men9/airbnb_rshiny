@@ -11,7 +11,8 @@ shinyUI(
              #img(src = "airbnb_newyork.jpg", height = 600, weight =700, align="center"),
              HTML('<center><img src="airbnb_newyork.jpg", height = 300, weight =1000 ></center>'),
              HTML("<h1 color=\"black\"><center>Dynamics of</center></h1>"),
-             HTML("<h1 color=\"black\"><center>Neighborhoods, Crime & Subways</center></h1>")
+             HTML("<h1 color=\"black\"><center>Neighborhoods, Crime & Subways</center></h1>"),
+             HTML("<h1 color=\"black\"><center>for Airbnb NYC 2017</center></h1>")
              ),
 
 #### Map ##########      
