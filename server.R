@@ -109,16 +109,16 @@ shinyServer(function(input, output, session) {
       theme(legend.position = 'none', plot.title = element_text(face="bold", size=22)) 
     
   })
-  output$graph_waffle <- renderPlot({
-    #boro_waffle_df=airbnb_waffle_df%>%filter(boro=='Bronx')%>%select(crime_level,n_nbhood)
-    waffle_vec=airbnb_waffle_df[airbnb_waffle_df$boro=='Bronx',"n_nbhood"]
-    names(waffle_vec)=airbnb_waffle_df[airbnb_waffle_df$boro=='Bronx',"crime_level"]
-      waffle(rows=5, waffle_vec, keep=TRUE, 
-             xlab='1 SQUARE = 1 NEIGHBORHOOD', 
-             title="Borough Crime Density Composition",
-             colors=c('cadetblue1','darkorchid','chocolate2','firebrick2'))+
-        theme(plot.title = element_text(face="bold", size=22))
-  })
+  # output$graph_waffle <- renderPlot({
+  #   #boro_waffle_df=airbnb_waffle_df%>%filter(boro=='Bronx')%>%select(crime_level,n_nbhood)
+  #   waffle_vec=airbnb_waffle_df[airbnb_waffle_df$boro=='Bronx',"n_nbhood"]
+  #   names(waffle_vec)=airbnb_waffle_df[airbnb_waffle_df$boro=='Bronx',"crime_level"]
+  #     waffle(rows=5, waffle_vec, keep=TRUE, 
+  #            xlab='1 SQUARE = 1 NEIGHBORHOOD', 
+  #            title="Borough Crime Density Composition",
+  #            colors=c('cadetblue1','darkorchid','chocolate2','firebrick2'))+
+  #       theme(plot.title = element_text(face="bold", size=22))
+  # })
 
 
 })#function

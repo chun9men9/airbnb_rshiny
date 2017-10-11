@@ -70,11 +70,11 @@ tabPanel("Subway Distance",
           )
           )#fluidrow
          ),
-tabPanel("Crime Density",    
-         fluidRow(
-           column(6, plotOutput("graph_waffle", width = "100%", height = "400px"))
-         )#fluidrow
-),
+# tabPanel("Crime Density",    
+#          fluidRow(
+#            column(6, plotOutput("graph_waffle", width = "100%", height = "400px"))
+#          )#fluidrow
+# ),
 tabPanel("Combined Factors",    
          fluidRow(
            column(3),
